@@ -141,6 +141,15 @@ body {
     padding-top: 10px;
 }
 
+
+.flightForm{
+    display: inline-block;
+}
+
+.bookingFormBox{
+    text-align: center;
+}
+
 /*-------------------------EUROPE/COUNTRIES---------------------*/
 
 .countriesContainer {

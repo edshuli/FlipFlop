@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <title>WanderLust</title>
+    <title>FlipFlop Destiations</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-sm fixed-top navbar-light ">
-                    <a href="index.html" class="navbar-brand">WanderLust</a>
+                    <a href="index.html" class="navbar-brand">FlipFlop Destiations</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-dropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                      </button>
@@ -31,6 +31,7 @@
                         </ul>
                         <form class="form-inline">
                             <input class="form-control mr-sm-2 searchButton" type="search" placeholder="Search" aria-label="Search">
+
                         </form>
                     </div>
             </div>
@@ -46,11 +47,57 @@
                 <div class="jumbotron text-center">
                     <h1 class="mainHeading">Relax! Unwind!</h1>
                     <p class="lead">Get in a flip flop state of mind</p>
-                    <a class="btn btn-primary btn-lg btnMain" href="#" role="button">Explore!</a>
+                    <!--    <a class="btn btn-primary btn-lg btnMain" href="#" role="button">Explore!</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form class="bookingForm">
+                    <div class="form-row bookingFormBox">
+                        <div class="form-group col-md-4 mb-3">
+                            <input type="radio" name="check" value="roundTrip" checked>Round Trip
+                            <input type="radio" name="check" value="oneWayTrip"> One Way Trip
+                            <input type="radio" name="check" value="multiCity"> Multi-City
+
+                        </div>
+                    </div>
+                    <div class="form-row bookFlight">
+                        <div class="form-group col-md-6">
+                            <legend for="flyingFrom" class="formTitle">Flying From</legend>
+                            <input type="text" class="flightForm" id="flyingFrom" placeholder="City or Airport" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <legend for="flyingTo class="formTitle"">Flying To</legend>
+                            <input type="text" class="flightForm" id="flyin" placeholder="City or Airport" required>
+                        </div>
+                    </div>
+                    <div class="form-row bookFlight">
+                        <div class="form-group col-md-3">
+                            <label for="departing">Departing</label>
+                            <input type="date" class="flightForm" id="departing" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="returning">Returning</label>
+                            <input type="date" class="flightForm" id="returning" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="adults">Adults</label>
+                            <input type="number" class="flightForm" id="adults" value="1" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="children">Children (0-15)</label>
+                            <input type="number" class="flightForm" id="children" value="0" required>
+                        </div>
+                </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- Package Travels -->
 
