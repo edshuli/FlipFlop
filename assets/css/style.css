@@ -10,9 +10,14 @@ body {
 }
 
 /*------ NavBar ------------*/
+.navbar{
+    background-color: #f3f4ef;
+}
+
+
 
 .navbar-light .navbar-brand {
-    color: rgba(255, 49, 7, 0.6784313725490196);
+    color: #c17008;
 }
 
 .navbar-brand {
@@ -30,6 +35,14 @@ body {
     letter-spacing: 2px;
     text-decoration: none;
 
+}
+
+
+.form-inline .searchButton {
+    border-radius: 50px;
+    width: 90px;
+    height: 50px;
+    box-shadow: 0 0 25px 0 #ed891494, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -59,7 +72,7 @@ body {
     margin-bottom: 30px;
     margin-top: 80px;
     font-family: -webkit-pictograph;
-    color: #ff3700c9;
+    color: #c17008;
     font-weight: bold;
 }
 
@@ -79,15 +92,10 @@ body {
     border-radius: 15px;
 }
 
-.form-inline .searchButton {
-    border-radius: 50px;
-    width: 90px;
-    height: 50px;
-    box-shadow: 0 0 25px 0 #ed891494, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-}
+
 
 /*-------- Card ---------------*/
-
+/*
 .destinationsContainer {
     width: 100vw;
     background: url(../img/hpImg.jpg) no-repeat center center fixed;
@@ -141,18 +149,11 @@ body {
     padding-top: 10px;
 }
 
+*/
 
-.flightForm{
-    display: inline-block;
-}
+/*-------------------------DESTINATIONS---------------------*/
 
-.bookingFormBox{
-    text-align: center;
-}
-
-/*-------------------------EUROPE/COUNTRIES---------------------*/
-
-.countriesContainer {
+.destinationsContainer {
     width: 100vw;
     background: url(../img/imgEurope/spainImg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -162,6 +163,12 @@ body {
     position: relative;
 }
 
+.mainHeader{
+    margin-left: 5px;
+    padding-top: 20px;
+    color: #c17008;
+    background-color:#f3f4ef;
+}
 .countriesCards{
     display: inline-table;
     justify-content: center;
@@ -171,22 +178,58 @@ body {
 
 .titleHeader{
     font-family:"Playfair Display", sans-serif;
-    color: burlywood;
+    color: #c17008;
     text-align: center;
     margin-bottom: 0px;
     padding-bottom: 10px;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-left: 70px;
     margin-left: 150px;
     margin-right: 200px;
 }
 
-.countriesContainer .card-title {
+.destinationsContainer .card-title {
     color: #e68a14;
     font-family: "Playfair Display", sans-serif;
     text-align: center;
 }
 
+.iconsBox{
+    text-align: center;
+}
+
+a{
+    padding-right: 10px;
+}
+
+
+i {
+    display: inline-block;
+    font-size: 20px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    padding-top: 12.5px;
+    background-color: #c17008;
+    margin: 10px 0 10px 10px;
+}
+
+.fa{
+    color: beige;
+    text-align: center;
+    font-size:20px;
+}
+
+
+.changeColor{
+    background-color: #23acbf96;
+    transition: 2s, ease-in-out;
+    
+}
+
+.highLight{
+    font-weight: bold;
+}
 /*
 .form-inline{
     border-radius: 50px;
