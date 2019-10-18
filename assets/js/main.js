@@ -19,4 +19,27 @@ $(document).ready(function() {
     $('.tooltip').tooltipster();
 });
 
+//Took this from stackoverflow
+var myNav = $(".navbar");
 
+$(window).on('scroll', function() {
+  "use strict";
+  if ($(window).scrollTop() >= 280) {
+    myNav.addClass("scroll");
+  } else {
+    myNav.removeClass("scroll");
+  }
+});
+
+
+$("input").mouseenter(function() {
+    $(".searchButton").addClass("borderColor");
+});
+
+$("input").mouseleave(function() {
+    $(".searchButton").removeClass("borderColor");
+})
+
+$("searchButton").click(function() {
+    $(".form-inline").addClass("borderColor");
+});

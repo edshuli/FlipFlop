@@ -10,10 +10,15 @@ body {
 }
 
 /*------ NavBar ------------*/
-.navbar{
-    background-color: #f3f4ef;
+
+.navbar {
+    transition: all .5s ease-in-out;
+    /* background-color: #f3f4ef;*/
 }
 
+.scroll {
+    background-color: #f3f4ef;
+}
 
 
 .navbar-light .navbar-brand {
@@ -37,14 +42,28 @@ body {
 
 }
 
-
 .form-inline .searchButton {
-    border-radius: 50px;
-    width: 90px;
-    height: 50px;
-    box-shadow: 0 0 25px 0 #ed891494, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    height: 40px;
+    width: 130px;
+    background-color:#f5f5dc78;
 }
 
+#searchButton {
+    background-color: #f5f5dc00;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    margin-left: -40px;
+}
+
+.form-inline .fa {
+    color:#212529b0;
+}
+
+.borderColor{
+    border-color: grey;
+}
 
 /*------Homepage ------------*/
 
@@ -95,6 +114,7 @@ body {
 
 
 /*-------- Card ---------------*/
+
 /*
 .destinationsContainer {
     width: 100vw;
@@ -163,21 +183,22 @@ body {
     position: relative;
 }
 
-.mainHeader{
+.mainHeader {
     margin-left: 5px;
     padding-top: 20px;
     color: #c17008;
-    background-color:#f3f4ef;
+    background-color: #f3f4ef;
 }
-.countriesCards{
+
+.countriesCards {
     display: inline-table;
     justify-content: center;
     align-items: center;
 }
 
 
-.titleHeader{
-    font-family:"Playfair Display", sans-serif;
+.titleHeader {
+    font-family: "Playfair Display", sans-serif;
     color: #c17008;
     text-align: center;
     margin-bottom: 0px;
@@ -194,11 +215,16 @@ body {
     text-align: center;
 }
 
-.iconsBox{
+
+.highLight {
+    font-weight: bold;
+}
+
+.iconsBox {
     text-align: center;
 }
 
-a{
+a {
     padding-right: 10px;
 }
 
@@ -214,22 +240,24 @@ i {
     margin: 10px 0 10px 10px;
 }
 
-.fa{
+.fa {
     color: beige;
     text-align: center;
-    font-size:20px;
+    font-size: 20px;
 }
 
 
-.changeColor{
-    background-color: #23acbf96;
-    transition: 2s, ease-in-out;
-    
+.changeColor {
+    background-color: rgba(0, 0, 0, .5);
+    ;
+    transition: all .2s ease-in-out .2s;
+
 }
 
-.highLight{
-    font-weight: bold;
-}
+
+
+
+
 /*
 .form-inline{
     border-radius: 50px;
