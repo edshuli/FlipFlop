@@ -16,8 +16,10 @@ body {
     /* background-color: #f3f4ef;*/
 }
 
+
+
 .scroll {
-    background-color: #f3f4ef;
+    background-color: #f3f4efc7;
 }
 
 
@@ -46,7 +48,7 @@ body {
     border-radius: 100px;
     height: 40px;
     width: 130px;
-    background-color:#f5f5dc78;
+    background-color: #f5f5dc78;
 }
 
 #searchButton {
@@ -58,10 +60,10 @@ body {
 }
 
 .form-inline .fa {
-    color:#212529b0;
+    color: #212529b0;
 }
 
-.borderColor{
+.borderColor {
     border-color: grey;
 }
 
@@ -175,56 +177,111 @@ body {
 
 .destinationsContainer {
     width: 100vw;
-    background: url(../img/imgEurope/spainImg.jpg) no-repeat center center fixed;
+    background: url(../img/spainImg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+ 
 }
 
-.mainHeader {
+#map {
+    min-height: 360px;
+}
+
+/*Heading - Paragraph*/
+
+.destinationsHeader {
     margin-left: 5px;
-    padding-top: 20px;
-    color: #c17008;
-    background-color: #f3f4ef;
-}
-
-.countriesCards {
-    display: inline-table;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.titleHeader {
-    font-family: "Playfair Display", sans-serif;
-    color: #c17008;
-    text-align: center;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
+    margin-bottom: 30px;
     padding-top: 50px;
-    padding-left: 70px;
-    margin-left: 150px;
-    margin-right: 200px;
+    color: #c17008;
+    background-color: #f3eff475;
+    text-align:center;
 }
 
-.destinationsContainer .card-title {
+
+p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.mainText {
+    color: #583a34;
+    font-weight: 400;
+}
+
+
+/*Sort Button*/
+
+.dropdown .btn {
+    background-color: transparent;
+    border-color: #c17008;
+    color: #cd8d3c;
+}
+
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.dropdown-menu {
+    background-color: #efe0d9fc;
+}
+/*Index.html - Cards*/
+
+
+.destinationsContainer {
     color: #e68a14;
     font-family: "Playfair Display", sans-serif;
     text-align: center;
 }
 
 
-.highLight {
-    font-weight: bold;
+
+/* topDestinations.html - Cards*/
+
+.topDestinationsContainer {
+    padding-top: 20px;
+    margin-top: 30px;
+
 }
+
+/*.countriesCards .citiesCards {
+    display: inline-table;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.titleHeader {
+    font-family: "Playfair Display", sans-serif;
+    color: #c17008;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 60px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 200px;
+}
+
+
+.topDestinationsContainer .card-title {
+    color: #e68a14;
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
+}
+
+
+/*Icons*/
 
 .iconsBox {
     text-align: center;
 }
 
-a {
+.topDestinationsContainer a {
     padding-right: 10px;
 }
 
@@ -247,81 +304,60 @@ i {
 }
 
 
+/*JS - CARDS */
+.highLight {
+    font-weight: bold;
+}
+
 .changeColor {
     background-color: rgba(0, 0, 0, .5);
-    ;
     transition: all .2s ease-in-out .2s;
-
 }
 
+/* ----------Travel Inspiration Container --------- */
 
-
-
-
-/*
-.form-inline{
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 0 25px 0 #14a0ed, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-}
-.form-inline{
-    font-family: 'Inconsolata', monospace;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    outline: none;
-    border: none;
-    background: crimson;
-    color: white;
-    text-shadow: 0 0 10px crimson;
-    padding: 0 20px 10px;
-    border-radius: 30px;
-    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-     background-color: white; 
-    transition: all 1s; 
-     opacity: 0; 
-    z-index: 5;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-}
-
-.form-inline:hover{
-      cursor: pointer;
+.travelInspirationContainer{
+    width: 100vw;
+    background: url(../img/spainImg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
     
 }
 
-.form-inline:before{
-     content: "";
-      position: absolute;
-      margin: auto;
-      top: 22px;
-      right: 0;
-      bottom: 0;
-      left: 22px;
-      width: 12px;
-      height: 2px;
-      background: white;
-      transform: rotate(45deg);
-      transition: all .5s;
+#travelInspirationCarousel{
+    margin-bottom: 50px;
 }
 
-.form-inline:after{
-    content: "";
-      position: absolute;
-      margin: auto;
-      top: -5px;
-      right: 0;
-      bottom: 0;
-      left: -5px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      border: 2px solid white;
-      transition: all .5s;
+
+/*.travelInspirationHeader{
+    margin-left: 5px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    color: #c17008;
+    text-align: center;
+}*/
+#travelInspirationHeader{
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.25;
+    max-width: 100%;
+    margin-bottom: 64px;
+    color: #c17008;
 }
-*/
+
+.travelInspirationSep{
+    display: block;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: 24px;
+    width: 30px;
+    background-color: #c3c3c1;
+}
+

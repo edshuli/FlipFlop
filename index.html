@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
     <title>FlipFlop Destiations</title>
+
+
 </head>
 
 <body>
@@ -29,13 +31,13 @@
                      </button>
                     <div id="menu-dropdown" class="navbar-collapse collapse">
                         <ul class="navbar-nav mr-auto">
-                            <li><a class="nav-link text-uppercase" href="#destinationsContainer">Discover</a></li>
+                            <li><a class="nav-link text-uppercase" href="#destinationsContainer">Destinations</a></li>
+                            <li><a class="nav-link text-uppercase" href="#">Travel Inspiration</a></li>
                             <li><a class="nav-link text-uppercase" href="#">Package Deals</a></li>
-                            <li><a class="nav-link text-uppercase" href="#">Find a Hotel</a></li>
-                            <!--   <li><a class="nav-link text-uppercase" href="#">Discover</a></li> -->
+                            <li><a class="nav-link text-uppercase" href="#">Contact</a></li>
                         </ul>
                         <div class="form-inline">
-                            <input class="form-control mr-sm-2 searchButton" type="search" placeholder="Search.." aria-label="Search">
+                            <input class="form-control mr-sm-2 searchButton" id="myInput" type="search" placeholder="Search.." aria-label="Search">
                             <i class="fa fa-search" id="searchButton"></i>
                         </div>
                     </div>
@@ -44,21 +46,6 @@
         </nav>
     </div>
 
-    <!--    
-    <div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
--->
     <!-- HomwopageContainer - Jumbotron -->
 
     <div class="container-fluid homepageContainer" id="homepageContainer">
@@ -84,494 +71,131 @@
     <!-- Destinations -->
 
     <div class="container-fluid destinationsContainer" id="destinationsContainer">
-        <div class="mainHeader">
-            <h1>Top Destinations in Europe</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl u.
-            </p>
+        <!--<div data-dropdown="drop1" class="topfilter rounded sort-button"><i class="fa fa-sort"></i><span> Sort</span>-->
+
+        <!--     <div id="map"></div>  -->
+        <div class="destinationsHeader">
+            <h2>Top 10 Destinations in the world! Discover!</h2>
+            <p class="mainText"> Find the best places to visit in the world!!</p>
         </div>
-        <div class="titleHeader">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Spain</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 countriesCards">
+        <div class="row" id="destinationsCards">
+            <div class="col-xs-6  col-lg-3 countriesCards" data-value="popularDestinations">
                 <div class="card">
-                    <img src="assets/img/imgEurope/spain/canaryIslandsImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Canary Islands</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
+                    <a href="topDestinations.html#countriesCards" target="_blank"><img src="assets/img/countryImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
+                    <div class="card-body" id="cardBody">
+                        <h5 class="card-title">Top 10 Countries</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
+            <div class="col-xs-6  col-lg-3 countriesCards" dataCategory="popularDestinations">
                 <div class="card">
-                    <img src="assets/img/imgEurope/spain/majorcaImg.jpg" class="card-img-top rounded float-left" alt="...">
+                    <a href="topDestinations.html#citiesCards" target="_blank"><img src="assets/img/citiesImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
                     <div class="card-body">
-                        <h5 class="card-title">Mallorca</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
+                        <h5 class="card-title">Top 10 Cities</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
+            <div class="col-xs-6 col-lg-3 countriesCards" dataCategory="popularDestinations">
                 <div class="card">
-                    <img src="assets/img/imgEurope/spain/malagaImg.jpg" class="card-img-top rounded float-left" alt="...">
+                    <a href="topDestinations.html#wintCitiesCards" target="_blank"><img src="assets/img/winterImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
                     <div class="card-body">
-                        <h5 class="card-title">Malaga</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
+                        <h5 class="card-title">Top 10 Winter Places</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
+            <div class="col-xs-6  col-lg-3 countriesCards" dataCategory="relaxingDestinations cheapDestinatios">
                 <div class="card">
-                    <img src="assets/img/imgEurope/spain/fuerteventuraImg.jpg" class="card-img-top rounded float-left" alt="...">
+                    <a href="topDestinations.html#sumCitiesCards" target="_blank"><img src="assets/img/sunnyImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
                     <div class="card-body">
-                        <h5 class="card-title">Fuerteventura</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/spain/costabravaImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Costa Brava</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
+                        <h5 class="card-title">Top 10 Summer Places</h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Countries / Portugal -->
 
-    <div class="container-fluid destinationsContainer" id="destinationsContainer">
-        <div class="titleHeader">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Portugal</h1>
-                </div>
-            </div>
+    <!-- Travel Inspiration --->
+    <div class="container-fluid travelInspirationContainer" id="travelInspirationContainer">
+        <div class="travelInspirationHeader">
+            <h2 id="travelInspirationHeader">Travel Inspiration<hr class="travelInspirationSep"></hr>
+            </h2>
+            
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/portugal/lisbonImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lisbon</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
+            <div class="col">
+                <div id="travelInspirationCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/portugal/portoImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Porto</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/portugal/faroImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"> Faro</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/portugal/carvoeiroImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Carvoeiro</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/portugal/albufeiraImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Albufeira</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
                         </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/hpImg.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Travel On Bugdet</h5>
+                            </div>
+                        </div>
+                        
                     </div>
+                    <a class="carousel-control-prev" href="#travelInspirationCarousel" role="button" data-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                     </a>
+                    <a class="carousel-control-next" href="#travelInspirationCarousel" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                           <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Countries / Greece -->
-
-    <div class="container-fluid destinationsContainer" id="destinationsContainer">
-        <div class="titleHeader">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Greece</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/greece/santoriniImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Santorini</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/greece/lefkadaImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lefkada</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/greece/samosImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Samos</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/greece/parosImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paros</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/greece/paxoiImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paxoi</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/greece/thasosImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Thasos</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Countries / Italy -->
-
-        <div class="container-fluid destinationsContainer" id="destinationsContainer">
-            <div class="titleHeader">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Italy</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/italy/positanoImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Positano</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/italy/sorrentoImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Sorrento</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/italy/capriImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Capri</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/italy/cinqueterreImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cinque Terre</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/italy/tropeaImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Tropea</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Countries / Albania -->
-
-        <div class="container-fluid destinationsContainer" id="destinationsContainer">
-            <div class="titleHeader">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Albania</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/albania/vloraImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Vlora</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/albania/ksamilImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Ksamil</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/albania/sarandaImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Saranda</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/albania/himaraImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Himara</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 countriesCards">
-                    <div class="card">
-                        <img src="assets/img/imgEurope/albania/komanImg.jpg" class="card-img-top rounded float-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Koman</h5>
-                            <div class="iconsBox">
-                                <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                                <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                                <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Countries / Croatia -->
-
-        <div class="container-fluid destinationsContainer" id="destinationsContainer">
-        </div>
-        <div class="titleHeader">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Croatia</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/croatia/dubrovnikImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Dubrovnik</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/croatia/splitImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Split</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/croatia/korculaImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Korcula</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/croatia/visImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Vis</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 countriesCards">
-                <div class="card">
-                    <img src="assets/img/imgEurope/croatia/makarskaImg.jpg" class="card-img-top rounded float-left" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Makarska</h5>
-                        <div class="iconsBox">
-                            <a class="mapInfo" href="#" target="_blank"><i class="fa fa-map-marker" class="toolPin" title="Show on Map" aria-hidden="true"></i></a>
-                            <a class="touristInfo" href="#" target="_blank"><i class="fa fa-compass" class="toolPin" title="Discover" aria-hidden="true"></i></a>
-                            <a class="hotelInfo" href="#" download><i class="fa fa-bed" class="toolPin" title="Book Hotel " aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!--   <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&callback=initMap"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places"></script> -->
 </body>
 
 
