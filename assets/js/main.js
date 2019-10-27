@@ -24,7 +24,7 @@ var myNav = $(".navbar");
 
 $(window).on('scroll', function() {
   "use strict";
-  if ($(window).scrollTop() >= 550) {
+  if ($(window).scrollTop() >= 400) {
     myNav.addClass("scroll");
   }
   else {
@@ -54,7 +54,7 @@ $("input").mouseleave(function() {
 
 
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://www.triposo.com/api/20190906/location.json?<ZNP76WBG>&token=<4vkqxzy5ob3vu3lqh617fzxkzygqwe>");
+//xhr.open("GET", "https://www.triposo.com/api/20190906/location.json?<ZNP76WBG>&token=<4vkqxzy5ob3vu3lqh617fzxkzygqwe>");
 
 xhr.send();
 
