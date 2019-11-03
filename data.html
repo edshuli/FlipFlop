@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="homepageContainer" id="bookingForm">
+        <div class="formSection">
+            <div class="container">
+                <div class="row">
+                    <div class="bookingForm">
+                        <div class="formHeader">
+                            <h2>Book a Hotel!</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="groupForm">
+                                    <span class="formLabel">Choose a city</span>
+                                    <input class="formControl" type="text" name="City" id="city" placeholder="City or Country" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="groupForm">
+                                    <span class="formLabel">Arrive</span>
+                                    <input class="formControl" type="date" name="arrive" id="arrive" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="groupForm">
+                                    <span class="formLabel">Depart</span>
+                                    <input class="formControl" type="date" name="depart" id="depart" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="groupForm">
+                                    <span class="formLabel">No of rooms</span>
+                                    <select class="formControl">
+                                        <option value="blank"></option>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="formLabel">Adults</span>
+                                <select class="formControl">
+                                        <option value="blank"></option>
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="formLabel">Children</span>
+                                <select class="formControl">
+                                        <option value="0" selected></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="formBtn">
+                                    <button class="submit" >Check Availability</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="output" id="famHolidaysData"></div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

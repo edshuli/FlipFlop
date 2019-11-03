@@ -36,10 +36,10 @@
                             <li><a class="nav-link text-uppercase" href="#">Package Deals</a></li>
                             <li><a class="nav-link text-uppercase" href="#">Contact</a></li>
                         </ul>
-                        <div class="form-inline">
+                        <!--  <div class="form-inline">
                             <input class="form-control mr-sm-2 searchButton" id="myInput" type="search" placeholder="Search.." aria-label="Search">
                             <i class="fa fa-search" id="searchButton"></i>
-                        </div>
+                        </div> -->
                     </div>
             </div>
         </div>
@@ -48,76 +48,24 @@
 
     <!-- HomwopageContainer - Jumbotron -->
 
-    <div class="homepageContainer" id="bookingForm">
-        <div class="formSection">
-            <div class="container">
-                <div class="row">
-                    <div class="bookingForm">
-                        <div class="formHeader">
-                            <h2>Book a Hotel!</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="groupForm">
-                                    <span class="formLabel">Choose a city</span>
-                                    <input class="formControl" type="text" name="City" id="city" placeholder="City or Country" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="groupForm">
-                                    <span class="formLabel">Arrive</span>
-                                    <input class="formControl" type="date" name="arrive" id="arrive" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="groupForm">
-                                    <span class="formLabel">Depart</span>
-                                    <input class="formControl" type="date" name="depart" id="depart" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="groupForm">
-                                    <span class="formLabel">No of rooms</span>
-                                    <select class="formControl">
-                                        <option value="blank"></option>
-                                        <option value="1" selected>1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <span class="formLabel">Adults</span>
-                                <select class="formControl">
-                                        <option value="blank"></option>
-                                        <option value="1">1</option>
-                                        <option value="2" selected>2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                            </div>
-                            <div class="col-md-3">
-                                <span class="formLabel">Children</span>
-                                <select class="formControl">
-                                        <option value="0" selected></option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="formBtn">
-                                    <button class="submit" >Check Availability</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container-fluid homepageContainer">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron ">
+                    <h1 class="mainHeading">Get inspired for your next </br><span class="text">
+                            Holiday Destination</span></h1>
+                    <button class="btnMain">Explore!!</button>
+                    <p class="title">And get in a FlipFlop state of mind!</p>
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <!-- Search/Map -->
+    <div class="container mapContainer">
+      <input id="pac-input" class="controls" type="text" placeholder="Where are we going?">
+        <div id="map"></div>
     </div>
 
 
@@ -129,14 +77,12 @@
 
 
 
-    <!-- Package Travels -->
 
     <!-- Destinations -->
 
     <div class="container-fluid destinationsContainer" id="destinationsContainer">
         <!--<div data-dropdown="drop1" class="topfilter rounded sort-button"><i class="fa fa-sort"></i><span> Sort</span>-->
 
-        <!--     <div id="map"></div>  -->
         <div class="destinationsHeader">
             <h2>Top 10 Destinations in the world! Discover!</h2>
             <p class="mainText"> Find the best places to visit in the world!!</p>
@@ -244,7 +190,7 @@
 
                 <div class="carousel-item">
                     <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgFam.jpg" alt="Fifth slide">
+                        <a href="data.html#famHolidaysData"><img class="d-block w-100" src="assets/img/imgFam.jpg" alt="Fifth slide"></a>
                         <div class="mask rgba-black-light"></div>
                     </div>
                     <div class="carousel-caption">
@@ -282,19 +228,17 @@
              <span class="carousel-control-next-icon" aria-hidden="true"></span>
                  <span class="sr-only">Next</span>
               </a>
-            <!--/.Controls-->
         </div>
-        <!--/.Carousel Wrapper-->
     </div>
 
-    <!--   <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&callback=initMap"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places&callback=searchCity"></script>
 </body>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/data.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:100,200,300,400,500,600,700|Playfair+Display:100,200,300,400,500,600,700|Mansalva:100,200,300,400');
 
+/*------Disable the horizontal scroll ----- */
+
+html,
 body {
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+body {
     height: 100%;
     font-family: "PT Serif", sans-serif;
     background-color: rgba(169, 144, 157, 0.2);
     font-weight: 400;
+    background: url(../img/imgHp.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 }
+
+
 
 /*------ NavBar ------------*/
 
@@ -43,6 +58,13 @@ body {
 
 }
 
+button:focus {
+    outline: 1px dotted;
+    outline: 2px auto;
+    outline-color: grey;
+    outline-style: auto;
+    outline-width: 2px;
+}
 
 /*---- SEARCH BUTTON ----*/
 
@@ -82,15 +104,13 @@ body {
 /*-----------NAVBAR - MOBILE VERSION ------------*/
 
 .navbar-toggler {
-    line-height: 1;
+    line-height: 0.5;
     background-color: #f8f9fa7a;
     border: 1px solid #fafaf8;
     border-radius: .25rem;
+    padding: 5px;
 }
 
-.navbar-collapse .form-inline {
-    padding-left: 250px;
-}
 
 
 /*------Homepage ------------*/
@@ -98,19 +118,15 @@ body {
 .homepageContainer {
     height: 100vh;
     width: 100vw;
-    background: url(../img/imgHp.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 /*--------Jumbotron-----------*/
 
-/*.jumbotron {
+.jumbotron {
     background-color: transparent;
     margin-right: 0px;
-    margin-top: 40%;
+    margin-top: 25%;
+    text-align: center;
 }
 
 .mainHeading {
@@ -122,9 +138,8 @@ body {
     font-weight: bold;
 }
 
-.lead {
-    color: rgba(0, 0, 0, .5);
-    font-weight: 600;
+span {
+    font-size: 30px;
 }
 
 .btnMain {
@@ -135,7 +150,14 @@ body {
     font-weight: bold;
     border-radius: 15px;
 }
-*/
+
+
+.title {
+    color: rgba(0, 0, 0, 0.74);
+    font-weight: 600;
+}
+
+
 
 
 /*-------- Card ---------------*/
@@ -200,19 +222,10 @@ body {
 
 .destinationsContainer {
     width: 100vw;
-    background: url(../img/spainImg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
     padding-bottom: 30px;
 
 }
 
-#map {
-    min-height: 360px;
-}
 
 /*Heading - Paragraph*/
 
@@ -343,25 +356,11 @@ i {
 /* ----------Travel Inspiration Container --------- */
 
 .inspirationsContainer {
-    /* width: 100vw;
-    background: url(../img/spainImg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;*/
     padding-top: 100px;
     padding-bottom: 100px;
 
 }
 
-
-/*#travelInspirationCarousel{
-    margin-bottom: 50px;
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}*/
 
 #inspirationsHeader {
     text-align: center;
@@ -404,77 +403,21 @@ i {
 
 /*------------------ MEDIA QUERRIES--------------*/
 
-@media (max-width: 575px) {
-    .titleHeader h2 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width:768px) {
-    .titleHeader {
-        margin-right: 200px;
-    }
-    .jumbotron {
-        margin-right: 200px;
-    }
-    .mainHeading {
-        font-size: 50px;
-    }
-    .lead {
-        font-size: 30px;
-    }
-    p {
-        font-size: 30px;
-    }
+@media (max-width: 320px) {
     .navbar-collapse .form-inline {
-        margin-left: 10px;
-        margin-right: 0px;
-    }
-    .carousel-caption {
-        padding-bottom: 15px;
+        padding-left: 160px;
     }
 
-}
-
-@media (min-width:1025px) {
-    .titleHeader {
-        margin-right: 200px;
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
     }
-    .jumbotron {
-        margin-right: 200px;
-        margin-top: 10%;
+    .navbar-toggler {
+        width: 36px;
+        height: 36px;
+        padding: 2px;
     }
-}
-
-@media (min-width:1023px) and (max-width:1367px) {
-    i {
-        margin: 0px;
-    }
-    .navbar .navbar-nav .nav-link {
-        letter-spacing: 0px;
-    }
-    h5 {
-        font-size: 1rem;
-    }
-}
-
-@media (min-width:767px) and (max-width:1025px) {
-    .navbar .navbar-nav .nav-link {
-        letter-spacing: 0px;
-    }
-}
-
-@media (min-width:359px) and (max-width:651px) {
-    .navbar-collapse .form-inline {
-        padding-left: 200px;
-    }
-}
-
-@media (min-width:319px) and (max-width:569px) {
-    .navbar-collapse .form-inline {
-        padding-left: 165px;
-    }
-
 
     h4 {
         font-size: 1.2rem;
@@ -483,34 +426,187 @@ i {
     .carousel-indicators {
         margin-bottom: 5px;
     }
+
 }
 
 
-/*----------------FORM-----------------*/
- .homepageContainer .formSection{
+
+
+
+@media (min-width:321px) and (max-width:376px) {
+    .navbar-collapse .form-inline {
+        padding-left: 200px;
+    }
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+    }
+    .navbar-toggler {
+        width: 36px;
+        height: 36px;
+        padding: 2px;
+    }
+}
+
+
+
+
+@media (min-width:376px) and (max-width:767px) {
+    .navbar-collapse .form-inline {
+        padding-left: 250px;
+    }
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.1em;
+        height: 1.1em;
+    }
+    .navbar-toggler {
+        width: 38px;
+        height: 38px;
+        padding: 2px;
+    }
+}
+
+
+
+
+
+/*----Tablet and Above -------*/
+
+@media (min-width:768px) {
+    .titleHeader {
+        margin-right: 200px;
+    }
+    .navbar-collapse .form-inline {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    .carousel-caption {
+        padding-bottom: 15px;
+    }
+}
+
+
+
+/*-------Ipad ---------------*/
+
+@media (min-width:767px) and (max-width:1023px) {
+
+    .navbar .navbar-nav .nav-link {
+        letter-spacing: 0px;
+    }
+    .navbar-collapse .form-inline {
+        padding-left: 0px;
+    }
+}
+
+
+/*---Ipad Pro -----*/
+
+@media (min-width:1023px) and (max-width:1199px) {
+    .navbar .navbar-nav .nav-link {
+        letter-spacing: 0px;
+    }
+
+    .navbar-collapse .form-inline {
+        padding-left: 0px;
+    }
+
+    .mainHeading {
+        font-size: 50px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+    }
+
+    .btnMain {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 45px;
+    }
+
+    form.searchBtn input[type=text] {
+        padding: 10px;
+        font-size: 20px;
+        width: 90%;
+    }
+
+    form.searchBtn button {
+        width: 10%;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+    }
+
+
+    .titleHeader {
+        margin-right: 200px;
+    }
+
+    i {
+        margin: 0px;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+
+
+}
+
+@media (min-width: 992px){
+.container {
+    max-width: 1000px;
+    max-height: 1000px;
+}
+}
+
+@media (min-width: 1200px) {
+    .jumbotron {
+        margin-top: 5%;
+    }
+}
+
+
+
+/*----------------BOOKING HOTEL FORM-----------------*/
+
+.homepageContainer .formSection {
     padding-top: 80px;
     left: 0;
     right: 0;
 }
- 
-.bookingForm{
+
+.bookingForm {
     background-color: #ffffffa1;
     max-width: 768px;
     width: 100%;
     margin: auto;
-    padding-right:30px;
-    padding-left:30px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 3px;
 }
 
-.formHeader{
+.formHeader {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.bookingForm .formHeader h2{
+.bookingForm .formHeader h2 {
     font-weight: 700;
     text-transform: capitalize;
     font-size: 38px;
@@ -519,11 +615,11 @@ i {
     margin-bottom: 0px;
 }
 
-.bookingForm .groupForm{
-  margin-bottom: 5px;
+.bookingForm .groupForm {
+    margin-bottom: 5px;
 }
 
-.bookingForm .formLabel{
+.bookingForm .formLabel {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 3px;
@@ -532,9 +628,9 @@ i {
     text-transform: capitalize;
 }
 
-.bookingForm .formControl{
-   background-color: #fff;
-   width: 100%;
+.bookingForm .formControl {
+    background-color: #fff;
+    width: 100%;
     height: 50px;
     padding: 0px 20px;
     border: 1px solid #e1e1e1;
@@ -544,7 +640,7 @@ i {
     font-size: 14px;
 }
 
-.formBtn .submit{
+.formBtn .submit {
     color: #fff;
     background-color: #c99552;
     font-weight: 700;
@@ -556,3 +652,78 @@ i {
     text-transform: capitalize;
     border-radius: 3px;
 }
+
+/*----------------------MAP CONTAINER -----------------*/
+
+/*SEARCH BAR*/
+
+.mapContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+form.searchBtn input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #c170083b;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.searchBtn i {
+    background-color: #c1700800;
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+.searchBtn i fa{
+   color:#c17008; 
+}
+
+/*----MAP ---*/
+#map {
+    min-height: 360px;
+    
+}
+
+.mapContainer input{
+  z-index: 2;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+  padding: 1em 0 1em 45px;
+  width: 100%;
+}
+
+.mapContainer input:focus, .mapContainer input:active {
+  outline: 0;
+  border-color: #aaaaaa;
+  background: #ffffff;
+}
+
+
+

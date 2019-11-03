@@ -32,6 +32,10 @@ $(window).on('scroll', function() {
   }
 });
 
+$("button").click(function() {
+  $(".navbar-collapse").addClass("scroll");
+})
+
 
 $("input").mouseenter(function() {
   $(".searchButton").addClass("borderColor");
@@ -41,31 +45,57 @@ $("input").mouseleave(function() {
 });
 
 
+function init() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {
+      lat: 52.379189,
+      lng: 4.899431
+    },
+    zoom: 12,
+    disableDefaultUI: true,
+    zoomControl: true,
+    streetViewControl: true,
+    mapTypeControlOptions: {
+      mapTypeIds: ['styled_map']
+    },fullscreenControl: true,
+    fullscreenControlOptions:{
+      position: google.maps.ControlPosition.LEFT_BOTTOM
+    }
+  });
 
-//function initMap() {
-//  var map = new google.maps.Map(document.getElementById("map"), {
-//    zoom: 3,
-//    center: {
-//      lat: 46.619261,
-//      lng: -33.134766
-//    }
-//  });
-//}
+
+  var searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(document.getElementById('pac-input'));
+  google.maps.event.addListener(searchBox, 'places_changed', function() {
+    searchBox.set('map', null);
 
 
-var xhr = new XMLHttpRequest();
-//xhr.open("GET", "https://www.triposo.com/api/20190906/location.json?<ZNP76WBG>&token=<4vkqxzy5ob3vu3lqh617fzxkzygqwe>");
+    var places = searchBox.getPlaces();
 
-xhr.send();
+    var bounds = new google.maps.LatLngBounds();
+    var i, place;
+    for (i = 0; place = places[i]; i++) {
+      (function(place) {
+        var marker = new google.maps.Marker({
 
-xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        data = JSON.parse(this.responseText);
-    };
+          position: place.geometry.location
+        });
+        marker.bindTo('map', searchBox, 'map');
+        google.maps.event.addListener(marker, 'map_changed', function() {
+          if (!this.getMap()) {
+            this.unbindAll();
+          }
+        });
+        bounds.extend(place.geometry.location);
+
+
+      }(place));
+
+    }
+    map.fitBounds(bounds);
+    searchBox.set('map', map);
+    map.setZoom(Math.min(map.getZoom(), 12));
+
+  });
 }
-
-setTimeout(function() {
-    console.log(data);
-}, 500);
-
-
+google.maps.event.addDomListener(window, 'load', init);
