@@ -53,11 +53,50 @@ $("input").mouseleave(function() {
 
 
 
-
-var currentLoc = [];
+var map;
+var service;
+var infowindow;
+var currentLoc = null;
 
 function show_loc_info(locType) {
   console.log(locType, currentLoc);
+  if (currentLoc != null) {
+    var curr_loc = new google.maps.LatLng(currentLoc.lat, currentLoc.lng)
+    map = new google.maps.Map(document.getElementById('map'), {
+          center: curr_loc,
+          zoom: 14
+        });
+    
+      var request = {
+        location: curr_loc,
+        radius: '1500',
+        type: locType
+      };
+      
+      console.log(request);
+    
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+    }
+    
+  function createMarker(place) {
+      var marker = new google.maps.Marker({
+        map: map,
+        title: place.name,
+        position: place.geometry.location,
+      });
+  }
+    
+    function callback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          var place = results[i];
+          console.log(results[i]);
+          createMarker(results[i]);
+        }
+      }
+  }
+  
 }
 
 
@@ -97,7 +136,10 @@ function init() {
     
     for (i = 0; place = places[i]; i++) {
       (function(place) {
-        console.log(place.geometry.location);
+        currentLoc = {
+          lat: place.geometry.location.lat(),
+          lng: place.geometry.location.lng()
+        };
         var marker = new google.maps.Marker({
           icon: icon,
           title: place.name,
@@ -113,7 +155,6 @@ function init() {
         bounds.extend(place.geometry.location);
 
       }(place));
-      currentLoc = place;
     }
 
     map.fitBounds(bounds);
@@ -121,5 +162,8 @@ function init() {
     map.setZoom(Math.min(map.getZoom(), 12));
 
   });
+  
+
 }
+
 google.maps.event.addDomListener(window, 'load', init);

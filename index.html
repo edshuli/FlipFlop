@@ -64,11 +64,14 @@
 
   <!-- Search/Map -->
   <div class="container mapContainer">
-    <button onclick="show_loc_info('hotel')">Hotel</button>
-    <button onclick="show_loc_info('attractions')">Attractions</button>
-    <button onclick="show_loc_info('restaurants')">Restaurants</button>
-    
-    
+    <div class="row">
+      <div class="col-12 mapList">
+        <button onclick="show_loc_info('hotel')">Hotel</button>
+        <button onclick="show_loc_info('tourist_attraction')">Attractions</button>
+        <button onclick="show_loc_info('restaurant')">Restaurants</button>
+
+      </div>
+    </div>
     <input id="pac-input" class="controls" type="text" placeholder="Where are we going?">
     <div id="map"></div>
   </div>
@@ -367,8 +370,8 @@
   </footer>
 
 
-  <script src="https://maps.googleapis.com/maps/api/place/details/js?v=3.exp&sensor=false&libraries=places&"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places&callback=searchCity"></script>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places&callback=initMap"></script>
 </body>
 
 
