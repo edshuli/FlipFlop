@@ -566,11 +566,11 @@ i {
 
 }
 
-@media (min-width: 992px){
-.container {
-    max-width: 1000px;
-    max-height: 1000px;
-}
+@media (min-width: 992px) {
+    .container {
+        max-width: 1000px;
+        max-height: 1000px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -700,30 +700,65 @@ form.example::after {
     padding-top: 5px;
 }
 
-.searchBtn i fa{
-   color:#c17008; 
+.searchBtn i fa {
+    color: #c17008;
 }
 
 /*----MAP ---*/
+
 #map {
     min-height: 360px;
-    
 }
 
-.mapContainer input{
-  z-index: 2;
-  display: inline-block;
-  border: 1px solid #d9d9d9;
-  background: #ffffff;
-  padding: 1em 0 1em 45px;
+.mapContainer input {
+    z-index: 2;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    background: #ffffff;
+    padding: 1em 0 1em 45px;
+    width: 100%;
+    font-family: "Playfair+Display", sans-serif;
+}
+
+.mapContainer input:focus,
+.mapContainer input:active {
+    outline: 0;
+    border-color: #aaaaaa;
+    background: #ffffff;
+}
+
+.mapContainer .pac-container {
+  box-shadow: none;
+  border: 1px solid #dadada;
+  border-radius: 0;
+  background: #fff;
   width: 100%;
+  font-family: "Playfair+Display", sans-serif;
 }
 
-.mapContainer input:focus, .mapContainer input:active {
-  outline: 0;
-  border-color: #aaaaaa;
-  background: #ffffff;
+.mapContainer .pac-container .pac-item {
+    font-size: 10px;
+    font-family: "Playfair+Display", sans-serif;
 }
 
+.mapContainer .pac-container .pac-matched .pac-item-query{
+    font-size:10px;
+    font-family: "Playfair+Display", sans-serif;
+}
 
+.mapContainer .pac-container .pac-icon {
+    left: 5px;
+    top: 10px;
+}
 
+.mapContainer input:hover {
+    border-color: silver;
+}
+
+.mapContainer input::placeholder {
+    color: #aaaaaa;
+}
+
+.mapContainer .pac-item-query {
+    border-bottom: 1px solid #efefef;
+}

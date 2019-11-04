@@ -14,10 +14,17 @@ $("h5").mouseleave(function() {
   $(this).removeClass("highLight");
 });
 
-//we use http://iamceege.github.io/tooltipster/ the tootipster site for this function
+//we use http://iamceege.github.io/tooltipster/
+//the tootipster site for this function
 $(document).ready(function() {
-  $('.tooltip').tooltipster();
+  $('.toolPin').tooltipster();
+
 });
+
+// Tooltips Initialization
+//$(function () {
+//$('[data-toggle="tooltip"]').tooltip()
+//})
 
 //Took this from stackoverflow
 var myNav = $(".navbar");
@@ -45,27 +52,40 @@ $("input").mouseleave(function() {
 });
 
 
+
+
+var currentLoc = [];
+
+function show_loc_info(locType) {
+  console.log(locType, currentLoc);
+}
+
+
+
+
+//Create a Map
 function init() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: 52.379189,
       lng: 4.899431
     },
-    zoom: 12,
+    zoom: 14,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
     mapTypeControlOptions: {
       mapTypeIds: ['styled_map']
-    },fullscreenControl: true,
-    fullscreenControlOptions:{
+    },
+    fullscreenControl: true,
+    fullscreenControlOptions: {
       position: google.maps.ControlPosition.LEFT_BOTTOM
     }
   });
 
 
+  //Create searchbox
   var searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(document.getElementById('pac-input'));
   google.maps.event.addListener(searchBox, 'places_changed', function() {
     searchBox.set('map', null);
 
@@ -73,13 +93,17 @@ function init() {
     var places = searchBox.getPlaces();
 
     var bounds = new google.maps.LatLngBounds();
-    var i, place;
+    var i, place, icon;
+    
     for (i = 0; place = places[i]; i++) {
       (function(place) {
+        console.log(place.geometry.location);
         var marker = new google.maps.Marker({
-
+          icon: icon,
+          title: place.name,
           position: place.geometry.location
         });
+        
         marker.bindTo('map', searchBox, 'map');
         google.maps.event.addListener(marker, 'map_changed', function() {
           if (!this.getMap()) {
@@ -88,10 +112,10 @@ function init() {
         });
         bounds.extend(place.geometry.location);
 
-
       }(place));
-
+      currentLoc = place;
     }
+
     map.fitBounds(bounds);
     searchBox.set('map', map);
     map.setZoom(Math.min(map.getZoom(), 12));

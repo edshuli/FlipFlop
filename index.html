@@ -2,243 +2,378 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-    <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-    <title>FlipFlop Destiations</title>
+  <title>FlipFlop Destiations</title>
 
 
 </head>
 
 <body>
-    <!--NavBar -->
-    <div class="container-fluid navbar-menu">
-        <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-sm fixed-top navbar-light ">
-                    <a href="index.html" class="navbar-brand">FlipFlop</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-dropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <!--NavBar -->
+  <div class="container-fluid navbar-menu">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-light ">
+          <a href="index.html" class="navbar-brand">FlipFlop</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-dropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                      </button>
-                    <div id="menu-dropdown" class="navbar-collapse collapse">
-                        <ul class="navbar-nav mr-auto">
-                            <li><a class="nav-link text-uppercase" href="#destinationsContainer">Destinations</a></li>
-                            <li><a class="nav-link text-uppercase" href="#inspirationsContainer">Travel Inspiration</a></li>
-                            <li><a class="nav-link text-uppercase" href="#">Package Deals</a></li>
-                            <li><a class="nav-link text-uppercase" href="#">Contact</a></li>
-                        </ul>
-                        <!--  <div class="form-inline">
+          <div id="menu-dropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+              <li><a class="nav-link text-uppercase" href="#destinationsContainer">Destinations</a></li>
+              <li><a class="nav-link text-uppercase" href="#inspirationsContainer">Travel Inspiration</a></li>
+              <li><a class="nav-link text-uppercase" href="#">Package Deals</a></li>
+              <li><a class="nav-link text-uppercase" href="#">Contact</a></li>
+            </ul>
+            <!--  <div class="form-inline">
                             <input class="form-control mr-sm-2 searchButton" id="myInput" type="search" placeholder="Search.." aria-label="Search">
                             <i class="fa fa-search" id="searchButton"></i>
                         </div> -->
-                    </div>
-            </div>
-        </div>
-        </nav>
+          </div>
+      </div>
     </div>
+    </nav>
+  </div>
 
-    <!-- HomwopageContainer - Jumbotron -->
+  <!-- HomwopageContainer - Jumbotron -->
 
-    <div class="container-fluid homepageContainer">
-        <div class="row">
-            <div class="col">
-                <div class="jumbotron ">
-                    <h1 class="mainHeading">Get inspired for your next </br><span class="text">
+  <div class="container-fluid homepageContainer">
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron ">
+          <h1 class="mainHeading">Get inspired for your next </br><span class="text">
                             Holiday Destination</span></h1>
-                    <button class="btnMain">Explore!!</button>
-                    <p class="title">And get in a FlipFlop state of mind!</p>
-                </div>
-            </div>
+          <button class="btnMain">Explore!!</button>
+          <p class="title">And get in a FlipFlop state of mind!</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Search/Map -->
+  <div class="container mapContainer">
+    <button onclick="show_loc_info('hotel')">Hotel</button>
+    <button onclick="show_loc_info('attractions')">Attractions</button>
+    <button onclick="show_loc_info('restaurants')">Restaurants</button>
+    
+    
+    <input id="pac-input" class="controls" type="text" placeholder="Where are we going?">
+    <div id="map"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Destinations -->
+
+  <div class="container-fluid destinationsContainer" id="destinationsContainer">
+    <!--<div data-dropdown="drop1" class="topfilter rounded sort-button"><i class="fa fa-sort"></i><span> Sort</span>-->
+
+    <div class="destinationsHeader">
+      <h2>Top 10 Destinations in the world! Discover!</h2>
+      <p class="mainText"> Find the best places to visit in the world!!</p>
+    </div>
+    <div class="row" id="destinationsCards">
+      <div class="col-xs-6  col-lg-3 countriesCards" data-value="popularDestinations">
+        <div class="card">
+          <a href="topDestinations.html#countriesCards" target="_blank"><img src="assets/img/countryImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
+          <div class="card-body" id="cardBody">
+            <h5 class="card-title">Top 10 Countries</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6  col-lg-3 countriesCards" dataCategory="popularDestinations">
+        <div class="card">
+          <a href="topDestinations.html#citiesCards" target="_blank"><img src="assets/img/citiesImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title">Top 10 Cities</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-lg-3 countriesCards" dataCategory="popularDestinations">
+        <div class="card">
+          <a href="topDestinations.html#wintCitiesCards" target="_blank"><img src="assets/img/winterImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title">Top 10 Winter Places</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6  col-lg-3 countriesCards" dataCategory="relaxingDestinations cheapDestinatios">
+        <div class="card">
+          <a href="topDestinations.html#sumCitiesCards" target="_blank"><img src="assets/img/sunnyImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title">Top 10 Summer Places</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Travel Inspiration -->
+  <div class="container-fluid inspirationsContainer" id="inspirationsContainer">
+    <div class="inspirationsHeader">
+      <h2 id="inspirationsHeader">Travel Inspiration
+        <hr class="titleSep"></hr>
+      </h2>
+
     </div>
 
+    <div id="carouselInspire" class="carousel slide carousel-fade" data-ride="carousel">
 
-    <!-- Search/Map -->
-    <div class="container mapContainer">
-      <input id="pac-input" class="controls" type="text" placeholder="Where are we going?">
-        <div id="map"></div>
-    </div>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselInspire" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselInspire" data-slide-to="1"></li>
+        <li data-target="#carouselInspire" data-slide-to="2"></li>
+        <li data-target="#carouselInspire" data-slide-to="3"></li>
+        <li data-target="#carouselInspire" data-slide-to="4"></li>
+        <li data-target="#carouselInspire" data-slide-to="5"></li>
+        <li data-target="#carouselInspire" data-slide-to="6"></li>
 
-
-
-
-
-
-
-
-
-
-
-    <!-- Destinations -->
-
-    <div class="container-fluid destinationsContainer" id="destinationsContainer">
-        <!--<div data-dropdown="drop1" class="topfilter rounded sort-button"><i class="fa fa-sort"></i><span> Sort</span>-->
-
-        <div class="destinationsHeader">
-            <h2>Top 10 Destinations in the world! Discover!</h2>
-            <p class="mainText"> Find the best places to visit in the world!!</p>
+      </ol>
+      <!--  Indicators-->
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="view">
+            <img class="d-block w-100" src="assets/img/imgW.jpg" alt="First Slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Wildlife and Nature</h4>
+          </div>
         </div>
-        <div class="row" id="destinationsCards">
-            <div class="col-xs-6  col-lg-3 countriesCards" data-value="popularDestinations">
-                <div class="card">
-                    <a href="topDestinations.html#countriesCards" target="_blank"><img src="assets/img/countryImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
-                    <div class="card-body" id="cardBody">
-                        <h5 class="card-title">Top 10 Countries</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6  col-lg-3 countriesCards" dataCategory="popularDestinations">
-                <div class="card">
-                    <a href="topDestinations.html#citiesCards" target="_blank"><img src="assets/img/citiesImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Top 10 Cities</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-lg-3 countriesCards" dataCategory="popularDestinations">
-                <div class="card">
-                    <a href="topDestinations.html#wintCitiesCards" target="_blank"><img src="assets/img/winterImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Top 10 Winter Places</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6  col-lg-3 countriesCards" dataCategory="relaxingDestinations cheapDestinatios">
-                <div class="card">
-                    <a href="topDestinations.html#sumCitiesCards" target="_blank"><img src="assets/img/sunnyImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Top 10 Summer Places</h5>
-                    </div>
-                </div>
-            </div>
+
+        <div class="carousel-item">
+          <div class="view">
+            <img class="d-block w-100" src="assets/img/imgArt.jpg" alt="Second slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Art and Culture</h4>
+          </div>
         </div>
-    </div>
 
-
-    <!-- Travel Inspiration --->
-    <div class="container-fluid inspirationsContainer" id="inspirationsContainer">
-        <div class="inspirationsHeader">
-            <h2 id="inspirationsHeader">Travel Inspiration
-                <hr class="titleSep"></hr>
-            </h2>
-
+        <div class="carousel-item">
+          <div class="view">
+            <img class="d-block w-100" src="assets/img/imgAdv.jpg" alt="Third slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Adventure</h4>
+          </div>
         </div>
-        <!--Carousel Wrapper-->
-        <div id="carouselInspire" class="carousel slide carousel-fade" data-ride="carousel">
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#carouselInspire" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselInspire" data-slide-to="1"></li>
-                <li data-target="#carouselInspire" data-slide-to="2"></li>
-                <li data-target="#carouselInspire" data-slide-to="3"></li>
-                <li data-target="#carouselInspire" data-slide-to="4"></li>
-                <li data-target="#carouselInspire" data-slide-to="5"></li>
-                <li data-target="#carouselInspire" data-slide-to="6"></li>
 
-            </ol>
-            <!--/.Indicators-->
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgW.jpg" alt="First Slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Wildlife and Nature</h4>
-                    </div>
-                </div>
+        <div class="carousel-item">
+          <div class="view">
+            <img class="d-block w-100" src="assets/img/imgRo.jpg" alt="Fourth slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Honeymoon and Romance</h4>
+          </div>
+        </div>
 
-                <div class="carousel-item">
-                    <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgArt.jpg" alt="Second slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Art and Culture</h4>
-                    </div>
-                </div>
+        <div class="carousel-item">
+          <div class="view">
+            <a href="data.html#famHolidaysData"><img class="d-block w-100" src="assets/img/imgFam.jpg" alt="Fifth slide"></a>
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Family Holidays</h4>
+          </div>
+        </div>
 
-                <div class="carousel-item">
-                    <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgAdv.jpg" alt="Third slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Adventure</h4>
-                    </div>
-                </div>
+        <div class="carousel-item">
+          <div class="view">
+            <img class="d-block w-100" src="assets/img/imgBug.jpg" alt="Sixth slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Travel on Bugdet</h4>
+          </div>
+        </div>
 
-                <div class="carousel-item">
-                    <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgRo.jpg" alt="Fourth slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Honeymoon and Romance</h4>
-                    </div>
-                </div>
+        <div class="carousel-item">
+          <div class="view">
+            <img class="d-block w-100" src="assets/img/imgRoad.jpg" alt="Seventh slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h4 class="h4-responsive">Road Trips</h4>
+          </div>
+        </div>
+      </div>
 
-                <div class="carousel-item">
-                    <div class="view">
-                        <a href="data.html#famHolidaysData"><img class="d-block w-100" src="assets/img/imgFam.jpg" alt="Fifth slide"></a>
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Family Holidays</h4>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgBug.jpg" alt="Sixth slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Travel on Bugdet</h4>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="view">
-                        <img class="d-block w-100" src="assets/img/imgRoad.jpg" alt="Seventh slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h4 class="h4-responsive">Road Trips</h4>
-                    </div>
-                </div>
-            </div>
-            <!--/.Slides-->
-            <!--Controls-->
-            <a class="carousel-control-prev" href="#carouselInspire" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#carouselInspire" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
              </a>
-            <a class="carousel-control-next" href="#carouselInspire" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselInspire" role="button" data-slide="next">
              <span class="carousel-control-next-icon" aria-hidden="true"></span>
                  <span class="sr-only">Next</span>
               </a>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small mdb-color pt-4">
+
+
+    <div class="container text-center text-md-left">
+
+
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
+          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
+
+
+        <hr class="w-100 clearfix d-md-none">
+
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+          <p>
+            <a href="#!">MDBootstrap</a>
+          </p>
+          <p>
+            <a href="#!">MDWordPress</a>
+          </p>
+          <p>
+            <a href="#!">BrandFlow</a>
+          </p>
+          <p>
+            <a href="#!">Bootstrap Angular</a>
+          </p>
+        </div>
+
+
+        <hr class="w-100 clearfix d-md-none">
+
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+          <p>
+            <a href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+        </div>
+
+
+        <hr class="w-100 clearfix d-md-none">
+
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+        </div>
+
+
+      </div>
+
+
+      <hr>
+
+
+      <div class="row d-flex align-items-center">
+
+        <div class="col-md-7 col-lg-8">
+
+
+          <p class="text-center text-md-left">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/">
+            <strong> MDBootstrap.com</strong>
+          </a>
+          </p>
+
+        </div>
+
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-twitter"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places&callback=searchCity"></script>
+
+  </footer>
+
+
+  <script src="https://maps.googleapis.com/maps/api/place/details/js?v=3.exp&sensor=false&libraries=places&"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places&callback=searchCity"></script>
 </body>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
-<script type="text/javascript" src="assets/js/data.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
