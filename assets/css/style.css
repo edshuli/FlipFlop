@@ -28,7 +28,6 @@ body {
 
 .navbar {
     transition: all .5s ease-in-out;
-    /* background-color: #f3f4ef;*/
 }
 
 .scroll {
@@ -66,31 +65,19 @@ button:focus {
     outline-width: 2px;
 }
 
-/*---- SEARCH BUTTON ----*/
-
-.form-inline .searchButton {
-    border-radius: 100px;
-    height: 40px;
-    width: 130px;
-
-}
-
-
-#searchButton {
-    color: rgba(0, 0, 0, 0.64);
-    background-color: #f5f5dc00;
-    width: 30px;
-    height: 30px;
-    padding-top: 5px;
-    margin-left: -40px;
-}
-
-.form-inline .fa {
-    color: #212529b0;
-}
 
 .borderColor {
     border-color: grey;
+}
+
+
+/*-----------NAVBAR - MOBILE VERSION ------------*/
+
+.navbar-toggler {
+    line-height: 0.5;
+    border: 1px solid #fafaf8;
+    border-radius: .25rem;
+    padding: 5px;
 }
 
 
@@ -98,21 +85,7 @@ button:focus {
     text-align: right;
     display: block;
 
-
 }
-
-/*-----------NAVBAR - MOBILE VERSION ------------*/
-
-.navbar-toggler {
-    line-height: 0.5;
-    background-color: #f8f9fa7a;
-    border: 1px solid #fafaf8;
-    border-radius: .25rem;
-    padding: 5px;
-}
-
-
-
 /*------Homepage ------------*/
 
 .homepageContainer {
@@ -142,15 +115,6 @@ span {
     font-size: 30px;
 }
 
-.btnMain {
-    background-color: #da7c2063;
-    border-color: #ff5a0096;
-    margin-top: 30px;
-    color: #212529b0;
-    font-weight: bold;
-    border-radius: 15px;
-}
-
 
 .title {
     color: rgba(0, 0, 0, 0.74);
@@ -158,71 +122,104 @@ span {
 }
 
 
+/*----------------------MAP CONTAINER -----------------*/
 
-
-/*-------- Card ---------------*/
-
-/*
-.destinationsContainer {
-    width: 100vw;
-    background: url(../img/hpImg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: #f6f4f5;
-    position: relative;
+.mapContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.destinationCards {
-    display: inline-table;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 35px;
+
+/*--------Sort Button------------*/
+
+.mapList button {
+    background-color: transparent;
+    border-color: #c17008;
+    color: #cd8d3c;
 }
 
-.card {
-    background-color: #fdfdfd;
-    border-radius: 2.5%;
-    width: 18rem;
-    height: 14em;
-    top: 50%;
-    margin: 15% auto;
-    align-items: center;
+#span {
+    font-size: 15px;
+}
+
+
+button :focus {
+    box-shadow: none;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fabd;
+}
+
+
+/*----MAP ---*/
+
+#map {
+    min-height: 360px;
+}
+
+.mapContainer input {
     z-index: 2;
-    display: block;
-    opacity: 0.9;
-    transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    background: #ffffff8f;
+    padding: 0.2em 0 0.2em 45px;
+    width: 100%;
+    font-family: "Playfair+Display", sans-serif;
 }
 
-
-.card-title a{
-    color: #343a40;
-    font-family: "PT Serif", sans-serif;
-    text-align: center;
+.mapContainer input:focus,
+.mapContainer input:active {
+    outline: 0;
+    border-color: #aaaaaa;
+    background: #ffffff;
 }
 
-.card-body {
-    height: 200px;
-
+.pac-container {
+    box-shadow: none;
+    border: 1px solid #dadada;
+    border-radius: 0;
+    background: #fff;
+    width: 100%;
+    font-family: "Playfair+Display", sans-serif;
 }
 
-.card-body .row {
-    text-align: center;
-    padding-top: 10px;
+.pac-container .pac-item {
+    font-size: 10px;
+    font-family: "Playfair+Display", sans-serif;
 }
 
-*/
+.pac-container .pac-matched .pac-item-query {
+    font-size: 10px;
+    font-family: "Playfair+Display", sans-serif;
+}
+
+.pac-container .pac-icon {
+    left: 5px;
+    top: 10px;
+}
+
+.mapContainer input:hover {
+    border-color: silver;
+}
+
+.mapContainer input::placeholder {
+    color: #aaaaaa;
+}
+
+.pac-item-query {
+    border-bottom: 1px solid #efefef;
+}
+
 
 /*-------------------------DESTINATIONS---------------------*/
 
 .destinationsContainer {
     width: 100vw;
     padding-bottom: 30px;
+     color: #e68a14;
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
 
 }
 
@@ -247,98 +244,6 @@ p {
 .mainText {
     color: #583a34;
     font-weight: 400;
-}
-
-
-/*--------Sort Button------------*/
-
-.dropdown .btn {
-    background-color: transparent;
-    border-color: #c17008;
-    color: #cd8d3c;
-}
-
-
-.btn:focus {
-    box-shadow: none;
-}
-
-.dropdown-menu {
-    background-color: #efe0d9fc;
-}
-
-/*-------------Index.html - Cards-----------*/
-
-.destinationsContainer {
-    color: #e68a14;
-    font-family: "Playfair Display", sans-serif;
-    text-align: center;
-}
-
-
-
-/*----------topDestinations.html - Cards----------*/
-
-.topDestinationsContainer {
-    padding-top: 20px;
-    margin-top: 30px;
-
-}
-
-/*.countriesCards .citiesCards {
-    display: inline-table;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
-.titleHeader {
-    font-family: "Playfair Display", sans-serif;
-    color: #c17008;
-    text-align: left;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-    padding-top: 60px;
-    padding-left: 0px;
-    margin-left: 0px;
-
-}
-
-
-
-.topDestinationsContainer .card-title {
-    color: #e68a14;
-    font-family: "Playfair Display", sans-serif;
-    text-align: center;
-}
-
-
-/*Icons*/
-
-.iconsBox {
-    text-align: center;
-}
-
-.topDestinationsContainer a {
-    padding-right: 10px;
-}
-
-
-i {
-    display: inline-block;
-    font-size: 20px;
-    width: 41px;
-    height: 41px;
-    border-radius: 50%;
-    padding-top: 12.5px;
-    background-color: #c17008;
-    margin: 10px 0 10px 10px;
-}
-
-.fa {
-    color: beige;
-    text-align: center;
-    font-size: 20px;
 }
 
 
@@ -401,185 +306,155 @@ i {
 
 
 
-/*------------------ MEDIA QUERRIES--------------*/
 
-@media (max-width: 320px) {
-    .navbar-collapse .form-inline {
-        padding-left: 160px;
-    }
 
-    .navbar-toggler-icon {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-    }
-    .navbar-toggler {
-        width: 36px;
-        height: 36px;
-        padding: 2px;
-    }
 
-    h4 {
-        font-size: 1.2rem;
-        margin-bottom: 1px;
-    }
-    .carousel-indicators {
-        margin-bottom: 5px;
-    }
+
+/*--------------CONTACT ------------------*/
+.contactContainer{
+    background-color:#f8f9fa5e;
+    margin-bottom: 20px;
+    padding-top: 60px;
+}
+.formHeader {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 38px;
+    color: #775124;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.contactText {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5%;
+    display: inline-block;
+    color: #946323;
+}
+
+
+
+.contactItem {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #d1be76;
+    border-radius: .50em;
+    margin-bottom: 5px;
+}
+
+.btnMain {
+    margin-top: 15px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #c99552;
+    font-weight: 700;
+    height: 50px;
+    border: none;
+}
+
+/*---------------FOOTER ------------------*/
+
+.footerContainer {
+    margin-bottom: 40px;
+    margin-top: 50px;
+    background-color:#f8f9fa5e;
+}
+
+
+
+.footerContainer i {
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    padding-top: 12.5px;
+    background-color: #a2691f;
+    margin: 10px 0 10px 10px;
+}
+
+.footerContainer p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #343a40;
+}
+
+.footerHeader {
+    color: #c17008;
+    font-weight: 600;
+}
+
+.footerCopyright{
+    color: black;
+    font-weight: 500; 
+}
+
+
+/*----------topDestinations.html - Cards----------*/
+
+.topDestinationsContainer {
+    padding-top: 20px;
+    margin-top: 30px;
+
+}
+
+
+.titleHeader {
+    font-family: "Playfair Display", sans-serif;
+    color: #c17008;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 60px;
+    padding-left: 0px;
+    margin-left: 0px;
 
 }
 
 
 
-
-
-@media (min-width:321px) and (max-width:376px) {
-    .navbar-collapse .form-inline {
-        padding-left: 200px;
-    }
-    .navbar-toggler-icon {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-    }
-    .navbar-toggler {
-        width: 36px;
-        height: 36px;
-        padding: 2px;
-    }
+.topDestinationsContainer .cardTitle {
+    color: #e68a14;
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
 }
 
 
+/*Icons*/
 
+.iconsBox {
+    text-align: center;
+}
 
-@media (min-width:376px) and (max-width:767px) {
-    .navbar-collapse .form-inline {
-        padding-left: 250px;
-    }
-    .navbar-toggler-icon {
-        display: inline-block;
-        width: 1.1em;
-        height: 1.1em;
-    }
-    .navbar-toggler {
-        width: 38px;
-        height: 38px;
-        padding: 2px;
-    }
+.topDestinationsContainer a {
+    padding-right: 10px;
 }
 
 
+i {
+    display: inline-block;
+    font-size: 20px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    padding-top: 12.5px;
+    background-color: #c99552;
+    margin: 10px 0 10px 10px;
+}
 
-
-
-/*----Tablet and Above -------*/
-
-@media (min-width:768px) {
-    .titleHeader {
-        margin-right: 200px;
-    }
-    .navbar-collapse .form-inline {
-        margin-left: 10px;
-        margin-right: 0px;
-    }
-    .carousel-caption {
-        padding-bottom: 15px;
-    }
+.fa {
+    color: beige;
+    text-align: center;
+    font-size: 20px;
 }
 
 
-
-/*-------Ipad ---------------*/
-
-@media (min-width:767px) and (max-width:1023px) {
-
-    .navbar .navbar-nav .nav-link {
-        letter-spacing: 0px;
-    }
-    .navbar-collapse .form-inline {
-        padding-left: 0px;
-    }
-}
-
-
-/*---Ipad Pro -----*/
-
-@media (min-width:1023px) and (max-width:1199px) {
-    .navbar .navbar-nav .nav-link {
-        letter-spacing: 0px;
-    }
-
-    .navbar-collapse .form-inline {
-        padding-left: 0px;
-    }
-
-    .mainHeading {
-        font-size: 50px;
-    }
-
-    .title {
-        font-size: 20px;
-    }
-
-    button {
-        width: 100px;
-        height: 50px;
-    }
-
-    .btnMain {
-        font-size: 20px;
-    }
-
-    span {
-        font-size: 45px;
-    }
-
-    form.searchBtn input[type=text] {
-        padding: 10px;
-        font-size: 20px;
-        width: 90%;
-    }
-
-    form.searchBtn button {
-        width: 10%;
-        color: white;
-        font-size: 17px;
-        border: 1px solid grey;
-        border-left: none;
-        cursor: pointer;
-    }
-
-
-    .titleHeader {
-        margin-right: 200px;
-    }
-
-    i {
-        margin: 0px;
-    }
-
-    h5 {
-        font-size: 1rem;
-    }
-
-
-
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 1000px;
-        max-height: 1000px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .jumbotron {
-        margin-top: 5%;
-    }
-}
-
-
+/*----------------Data.html--------------------------*/
 
 /*----------------BOOKING HOTEL FORM-----------------*/
 
@@ -653,112 +528,133 @@ i {
     border-radius: 3px;
 }
 
-/*----------------------MAP CONTAINER -----------------*/
 
-/*SEARCH BAR*/
 
-.mapContainer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+/*------------------ MEDIA QUERRIES--------------*/
+
+@media (max-width: 320px) {
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+    }
+    .navbar-toggler {
+        width: 36px;
+        height: 36px;
+        padding: 2px;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1px;
+    }
+    .carousel-indicators {
+        margin-bottom: 5px;
+    }
 }
 
-form.searchBtn input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
+
+@media (min-width:321px) and (max-width:376px) {
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+    }
+    .navbar-toggler {
+        width: 36px;
+        height: 36px;
+        padding: 2px;
+    }
 }
 
 
-form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #c170083b;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
+@media (min-width:376px) and (max-width:767px) {
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.1em;
+        height: 1.1em;
+    }
+    .navbar-toggler {
+        width: 38px;
+        height: 38px;
+        padding: 2px;
+    }
 }
 
-form.example button:hover {
-    background: #0b7dda;
+
+
+
+
+/*----Tablet and Above -------*/
+
+@media (min-width:768px) {
+    .titleHeader {
+        margin-right: 200px;
+    }
+    .carousel-caption {
+        padding-bottom: 15px;
+    }
+
+    .form-control {
+        font-size: 1.2rem;
+    }
+    .contactText {
+        font-size: 20px;
+    }
 }
 
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
+
+/*---Ipad Pro -----*/
+
+@media (min-width:1023px) and (max-width:1199px) {
+    .navbar .navbar-nav .nav-link {
+        letter-spacing: 0px;
+    }
+    .mainHeading {
+        font-size: 50px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+    }
+
+    .btnMain {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 45px;
+    }
+    .titleHeader {
+        margin-right: 200px;
+    }
+
+    i {
+        margin: 0px;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+
+
 }
 
-.searchBtn i {
-    background-color: #c1700800;
-    margin-bottom: 5px;
-    padding-top: 5px;
+@media (min-width: 992px) {
+    .container {
+        max-width: 1000px;
+        max-height: 1000px;
+    }
 }
 
-.searchBtn i fa {
-    color: #c17008;
-}
-
-/*----MAP ---*/
-
-#map {
-    min-height: 360px;
-}
-
-.mapContainer input {
-    z-index: 2;
-    display: inline-block;
-    border: 1px solid #d9d9d9;
-    background: #ffffff;
-    padding: 1em 0 1em 45px;
-    width: 100%;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.mapContainer input:focus,
-.mapContainer input:active {
-    outline: 0;
-    border-color: #aaaaaa;
-    background: #ffffff;
-}
-
-.mapContainer .pac-container {
-  box-shadow: none;
-  border: 1px solid #dadada;
-  border-radius: 0;
-  background: #fff;
-  width: 100%;
-  font-family: "Playfair+Display", sans-serif;
-}
-
-.mapContainer .pac-container .pac-item {
-    font-size: 10px;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.mapContainer .pac-container .pac-matched .pac-item-query{
-    font-size:10px;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.mapContainer .pac-container .pac-icon {
-    left: 5px;
-    top: 10px;
-}
-
-.mapContainer input:hover {
-    border-color: silver;
-}
-
-.mapContainer input::placeholder {
-    color: #aaaaaa;
-}
-
-.mapContainer .pac-item-query {
-    border-bottom: 1px solid #efefef;
+@media (min-width: 1200px) {
+    .jumbotron {
+        margin-top: 5%;
+    }
 }

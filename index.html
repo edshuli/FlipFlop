@@ -34,19 +34,15 @@
               <li><a class="nav-link text-uppercase" href="#destinationsContainer">Destinations</a></li>
               <li><a class="nav-link text-uppercase" href="#inspirationsContainer">Travel Inspiration</a></li>
               <li><a class="nav-link text-uppercase" href="#">Package Deals</a></li>
-              <li><a class="nav-link text-uppercase" href="#">Contact</a></li>
+              <li><a class="nav-link text-uppercase" href="#contactForm">Contact</a></li>
             </ul>
-            <!--  <div class="form-inline">
-                            <input class="form-control mr-sm-2 searchButton" id="myInput" type="search" placeholder="Search.." aria-label="Search">
-                            <i class="fa fa-search" id="searchButton"></i>
-                        </div> -->
           </div>
       </div>
     </div>
     </nav>
   </div>
 
-  <!-- HomwopageContainer - Jumbotron -->
+  <!-- HomepageContainer - Jumbotron -->
 
   <div class="container-fluid homepageContainer">
     <div class="row">
@@ -54,7 +50,6 @@
         <div class="jumbotron ">
           <h1 class="mainHeading">Get inspired for your next </br><span class="text">
                             Holiday Destination</span></h1>
-          <button class="btnMain">Explore!!</button>
           <p class="title">And get in a FlipFlop state of mind!</p>
         </div>
       </div>
@@ -62,35 +57,34 @@
   </div>
 
 
-  <!-- Search/Map -->
-  <div class="container mapContainer">
-    <div class="row">
-      <div class="col-12 mapList">
-        <button onclick="show_loc_info('hotel')">Hotel</button>
-        <button onclick="show_loc_info('tourist_attraction')">Attractions</button>
-        <button onclick="show_loc_info('restaurant')">Restaurants</button>
-
+  <!-- MapContainer/Search/Map -->
+<div class="container mapContainer">
+  <div class="row">
+    <div class="col-12 mapList">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" id="sortBtn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span id="span"> Sort</span>
+                </button>
+        <div class="dropdown-menu sortOptions" aria-labelledby="dropdownMenu2">
+          <button onclick="show_loc_info('hotel')">Hotel</button>
+          <button onclick="show_loc_info('tourist_attraction')">Attractions</button>
+          <button onclick="show_loc_info('restaurant')">Restaurants</button>
+          <button onclick="show_loc_info('store')">Shopping</button>
+          <button onclick="show_loc_info('cafe','bar')">Cafe & Bar</button>
+        </div>
       </div>
     </div>
-    <input id="pac-input" class="controls" type="text" placeholder="Where are we going?">
-    <div id="map"></div>
+
   </div>
-
-
-
-
-
-
-
-
+  <input id="pac-input" class="controls" type="text" placeholder="Where are we going?">
+  <div id="map"></div>
+</div>
 
 
 
   <!-- Destinations -->
 
   <div class="container-fluid destinationsContainer" id="destinationsContainer">
-    <!--<div data-dropdown="drop1" class="topfilter rounded sort-button"><i class="fa fa-sort"></i><span> Sort</span>-->
-
     <div class="destinationsHeader">
       <h2>Top 10 Destinations in the world! Discover!</h2>
       <p class="mainText"> Find the best places to visit in the world!!</p>
@@ -100,7 +94,7 @@
         <div class="card">
           <a href="topDestinations.html#countriesCards" target="_blank"><img src="assets/img/countryImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
           <div class="card-body" id="cardBody">
-            <h5 class="card-title">Top 10 Countries</h5>
+            <h5 class="cardTitle">Top 10 Countries</h5>
           </div>
         </div>
       </div>
@@ -108,7 +102,7 @@
         <div class="card">
           <a href="topDestinations.html#citiesCards" target="_blank"><img src="assets/img/citiesImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
           <div class="card-body">
-            <h5 class="card-title">Top 10 Cities</h5>
+            <h5 class="cardTitle">Top 10 Cities</h5>
           </div>
         </div>
       </div>
@@ -116,7 +110,7 @@
         <div class="card">
           <a href="topDestinations.html#wintCitiesCards" target="_blank"><img src="assets/img/winterImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
           <div class="card-body">
-            <h5 class="card-title">Top 10 Winter Places</h5>
+            <h5 class="cardTitle">Top 10 Winter Places</h5>
           </div>
         </div>
       </div>
@@ -124,7 +118,7 @@
         <div class="card">
           <a href="topDestinations.html#sumCitiesCards" target="_blank"><img src="assets/img/sunnyImg.jpg" class="card-img-top rounded float-left" alt="..."></a>
           <div class="card-body">
-            <h5 class="card-title">Top 10 Summer Places</h5>
+            <h5 class="cardTitle">Top 10 Summer Places</h5>
           </div>
         </div>
       </div>
@@ -138,11 +132,9 @@
       <h2 id="inspirationsHeader">Travel Inspiration
         <hr class="titleSep"></hr>
       </h2>
-
     </div>
-
+  
     <div id="carouselInspire" class="carousel slide carousel-fade" data-ride="carousel">
-
       <ol class="carousel-indicators">
         <li data-target="#carouselInspire" data-slide-to="0" class="active"></li>
         <li data-target="#carouselInspire" data-slide-to="1"></li>
@@ -151,10 +143,8 @@
         <li data-target="#carouselInspire" data-slide-to="4"></li>
         <li data-target="#carouselInspire" data-slide-to="5"></li>
         <li data-target="#carouselInspire" data-slide-to="6"></li>
-
       </ol>
-      <!--  Indicators-->
-      <!--Slides-->
+  
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
           <div class="view">
@@ -162,10 +152,10 @@
             <div class="mask rgba-black-light"></div>
           </div>
           <div class="carousel-caption">
-            <h4 class="h4-responsive">Wildlife and Nature</h4>
+            <h5 class="h4-responsive">Wildlife and Nature</h4>
           </div>
         </div>
-
+  
         <div class="carousel-item">
           <div class="view">
             <img class="d-block w-100" src="assets/img/imgArt.jpg" alt="Second slide">
@@ -175,7 +165,7 @@
             <h4 class="h4-responsive">Art and Culture</h4>
           </div>
         </div>
-
+  
         <div class="carousel-item">
           <div class="view">
             <img class="d-block w-100" src="assets/img/imgAdv.jpg" alt="Third slide">
@@ -185,7 +175,7 @@
             <h4 class="h4-responsive">Adventure</h4>
           </div>
         </div>
-
+  
         <div class="carousel-item">
           <div class="view">
             <img class="d-block w-100" src="assets/img/imgRo.jpg" alt="Fourth slide">
@@ -195,7 +185,7 @@
             <h4 class="h4-responsive">Honeymoon and Romance</h4>
           </div>
         </div>
-
+  
         <div class="carousel-item">
           <div class="view">
             <a href="data.html#famHolidaysData"><img class="d-block w-100" src="assets/img/imgFam.jpg" alt="Fifth slide"></a>
@@ -205,7 +195,7 @@
             <h4 class="h4-responsive">Family Holidays</h4>
           </div>
         </div>
-
+  
         <div class="carousel-item">
           <div class="view">
             <img class="d-block w-100" src="assets/img/imgBug.jpg" alt="Sixth slide">
@@ -215,7 +205,7 @@
             <h4 class="h4-responsive">Travel on Bugdet</h4>
           </div>
         </div>
-
+  
         <div class="carousel-item">
           <div class="view">
             <img class="d-block w-100" src="assets/img/imgRoad.jpg" alt="Seventh slide">
@@ -226,151 +216,80 @@
           </div>
         </div>
       </div>
-
+  
       <a class="carousel-control-prev" href="#carouselInspire" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-             </a>
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
       <a class="carousel-control-next" href="#carouselInspire" role="button" data-slide="next">
-             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                 <span class="sr-only">Next</span>
-              </a>
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+                </a>
+    </div>
+  </div>
+
+  <!-- Contact -->
+
+
+  <div class="container contactContainer" id="contactForm">
+    <div class="row contactForm">
+      <div class="col formContact">
+        <h2 class="text-uppercase formHeader">Contact</h2>
+        <hr class="titleSep">
+        <p class="contactText">Do you feel confused and cannot decide where to go? Then send us an email </br>
+          and we will help you to find the most suitable vacation for you!!</p>
+        <div class="center-form">
+          <form>
+            <div class="contactItem">
+              <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required/>
+            </div>
+            <div class="contactItem">
+              <input type="text" name="phone" id="phonenumber" class="form-control" placeholder="Phone" required />
+            </div>
+            <div class="contactItem">
+              <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required/>
+            </div>
+            <div class="contactItem">
+              <textarea rows="5" name="request" id="request" class="form-control" placeholder="Message....." required></textarea>
+            </div>
+            <div class="row text-center">
+              <div class="col">
+                <button class="btnMain">1,2,3..G0!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
 
+  <!-- FOOTER -->
 
-  <!-- Footer -->
-  <footer class="page-footer font-small mdb-color pt-4">
-
-
-    <div class="container text-center text-md-left">
-
-
-      <div class="row text-center text-md-left mt-3 pb-3">
-
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <footer>
+    <div class="container footerContainer">
+      <div class="row">
+        <div class="col-md-6 ">
+          <h6 class="text-uppercase footerHeader">Contact Information</h6>
+          <p>
+            <i class="fa fa-home "></i> Amsterdam, The Netherlands</p>
+          <p>
+            <i class="fa fa-envelope"></i> info@gmail.com</p>
+          <p>
+            <i class="fa fa-phone"></i> + 64 930 7025</p>
         </div>
-
-
-        <hr class="w-100 clearfix d-md-none">
-
-
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-          <p>
-            <a href="#!">MDBootstrap</a>
-          </p>
-          <p>
-            <a href="#!">MDWordPress</a>
-          </p>
-          <p>
-            <a href="#!">BrandFlow</a>
-          </p>
-          <p>
-            <a href="#!">Bootstrap Angular</a>
-          </p>
+        <div class="col-md-6 icons">
+          <h6 class="text-uppercase footerHeader">Find us on social media!</h6>
+          <a href="https://linkedin.com/in/edna-shuli-49142888" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/dido_edna/?hl=el" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
-
-
-        <hr class="w-100 clearfix d-md-none">
-
-
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-          <p>
-            <a href="#!">Your Account</a>
-          </p>
-          <p>
-            <a href="#!">Become an Affiliate</a>
-          </p>
-          <p>
-            <a href="#!">Shipping Rates</a>
-          </p>
-          <p>
-            <a href="#!">Help</a>
-          </p>
-        </div>
-
-
-        <hr class="w-100 clearfix d-md-none">
-
-
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-          <p>
-            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-          <p>
-            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-          <p>
-            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-        </div>
-
-
       </div>
 
-
-      <hr>
-
-
-      <div class="row d-flex align-items-center">
-
-        <div class="col-md-7 col-lg-8">
-
-
-          <p class="text-center text-md-left">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/">
-            <strong> MDBootstrap.com</strong>
-          </a>
-          </p>
-
-        </div>
-
-        <div class="col-md-5 col-lg-4 ml-lg-0">
-
-          <!-- Social buttons -->
-          <div class="text-center text-md-right">
-            <ul class="list-unstyled list-inline">
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-
-      </div>
-
-
+      <div class="footerCopyright text-center">© 2019 Copyright: Edna Shuli</div>
     </div>
-
-
   </footer>
 
 
-  
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hUA48xCG4EXHlwSrT7_6bo7Hx_KBwG8&libraries=places&callback=initMap"></script>
 </body>
 
