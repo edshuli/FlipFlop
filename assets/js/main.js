@@ -53,17 +53,16 @@ $("input").mouseleave(function() {
 
 
 
-//Create Global Variables
-
 var map;
 var service;
 var  geocoder = new google.maps.Geocoder();
  var infowindow = new google.maps.InfoWindow();
 var currentLoc = null;
+var markerImg = 'https://developers.google.com/maps/documentation/javascript/images/marker_orange';
 
 
 //Create a function for the different types of choice
-function show_loc_info(locType) {
+function showLocInfo(locType) {
   console.log(locType, currentLoc);
   if (currentLoc != null) {
     var curr_loc = new google.maps.LatLng(currentLoc.lat, currentLoc.lng)
@@ -110,12 +109,11 @@ function show_loc_info(locType) {
       <p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=${apiKey}"></p>
     </div>
   `;
-
-
  var infowindow = new google.maps.InfoWindow({
           content: currInfo
         });
 */
+
   function createMarker(place) {
     var marker = new google.maps.Marker({
       map: map,
@@ -124,10 +122,8 @@ function show_loc_info(locType) {
       animation: google.maps.Animation.DROP,
       position: place.geometry.location
     });
-    marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
   }
+  
 
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -135,6 +131,7 @@ function show_loc_info(locType) {
         var place = results[i];
         console.log(results[i]);
         createMarker(results[i]);
+        
       }
     }
   }
