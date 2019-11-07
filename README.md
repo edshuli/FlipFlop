@@ -12,8 +12,6 @@
 
 Please be free to take a closer look here: <a href="https://edshuli.github.io/FlipFlop/" target="_blank">FlipFlop</a>
 
-![MockUp](https://octodex.github.com/assets/img/mockUp.png)
-
 ## UX
 
 My goal in the design of the website is to prvide an easy access to all the important information on the site while allowing
@@ -117,7 +115,8 @@ I changed the margin of the text and the width and height of the carousel itself
 **I used the below validators throught the website**
 
 1.<a href="https://validator.w3.org/" target="_blank">W3C-Validator Service</a></br>
-2.<a href="https://codebeautify.org/jsvalidate" target="_blank">JavaScript-Validator Service</a>
+2.<a href="https://jshint.com/" target="_blank">JavaScript-Validator Service</a>
+
  
 
 #### Navbar Menu
@@ -183,6 +182,7 @@ The site will be updated automatically upon new commits to the master branch.
 <li>I have to thank <a href="https://www.lonelyplanet.com">Lonely Planet</a>, all the inspiration came from this website.</li>
 <li>I used HTML-Fomatter to organize my Html file</li>
 <li>I used CSS-Cleaner tool to organize my Css file</li>
+<li>I used JSHint tool to organize my JavaScript file<li>
 
 ### Media 
 
@@ -195,7 +195,6 @@ The site will be updated automatically upon new commits to the master branch.
 <li>Some other help I got from especialy for Google Maps <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
 <li>Espaecially for Google Maps I used<a href="https://console.cloud.google.com/google/maps" target="_blank">Google Cloude Platform</a></li>
 <li>With the Jquery I got help from <a href="https://www.w3schools.com" target="_blank">w3schools</a></li>
-<li>The multi-device mock-up on this document is created using <a href="https://techsini.com/multi-mockup/" target="_blank">Multi Device MOCK-UP.</a></li>
 <li>I have to thank <a href="https://www.lonelyplanet.com">Lonely Planet</a>, all the inspiration came from this website.</li>
 
 ##### This is for educational use.

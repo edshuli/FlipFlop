@@ -57,15 +57,6 @@ body {
 
 }
 
-button:focus {
-    outline: 1px dotted;
-    outline: 2px auto;
-    outline-color: grey;
-    outline-style: auto;
-    outline-width: 2px;
-}
-
-
 .borderColor {
     border-color: grey;
 }
@@ -122,95 +113,6 @@ span {
 }
 
 
-/*----------------------MAP CONTAINER -----------------*/
-
-.mapContainer {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-
-/*--------Sort Button------------*/
-
-.mapList button {
-    background-color: transparent;
-    border-color: #c17008;
-    color: #cd8d3c;
-}
-
-#span {
-    font-size: 15px;
-}
-
-
-button :focus {
-    box-shadow: none;
-}
-
-.dropdown-menu {
-    background-color: #f8f9fabd;
-}
-
-
-/*----MAP ---*/
-
-#map {
-    min-height: 360px;
-}
-
-.mapContainer input {
-    z-index: 2;
-    display: inline-block;
-    border: 1px solid #d9d9d9;
-    background: #ffffff8f;
-    padding: 0.2em 0 0.2em 45px;
-    width: 100%;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.mapContainer input:focus,
-.mapContainer input:active {
-    outline: 0;
-    border-color: #aaaaaa;
-    background: #ffffff;
-}
-
-.pac-container {
-    box-shadow: none;
-    border: 1px solid #dadada;
-    border-radius: 0;
-    background: #fff;
-    width: 100%;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.pac-container .pac-item {
-    font-size: 10px;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.pac-container .pac-matched .pac-item-query {
-    font-size: 10px;
-    font-family: "Playfair+Display", sans-serif;
-}
-
-.pac-container .pac-icon {
-    left: 5px;
-    top: 10px;
-}
-
-.mapContainer input:hover {
-    border-color: silver;
-}
-
-.mapContainer input::placeholder {
-    color: #aaaaaa;
-}
-
-.pac-item-query {
-    border-bottom: 1px solid #efefef;
-}
-
 
 /*-------------------------DESTINATIONS---------------------*/
 
@@ -244,6 +146,12 @@ p {
 .mainText {
     color: #583a34;
     font-weight: 400;
+}
+
+.cardTitle {
+    color: #e68a14;
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
 }
 
 
@@ -304,11 +212,65 @@ p {
 }
 
 
+/*----------------------MAP CONTAINER -----------------*/
+
+.mapContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+/*--------Sort Button------------*/
+
+.mapList button {
+    background-color: transparent;
+    border-color: #c17008;
+    color: #cd8d3c;
+}
+
+#span {
+    font-size: 15px;
+}
+
+
+button :focus {
+    box-shadow: none;
+    outline: 1px dotted;
+    outline: 2px auto;
+    outline-color: beige;
+    outline-style: auto;
+    outline-width: 2px;
+}
 
 
 
+.btnColorChange {
+    background-color: red;
+}
 
 
+/*----MAP ---*/
+
+#map {
+    min-height: 360px;
+}
+
+.mapContainer input {
+    z-index: 2;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    background: #ffffff8f;
+    padding: 0.2em 0 0.2em 45px;
+    width: 100%;
+    font-family: "Playfair+Display", sans-serif;
+}
+
+.mapContainer input:focus,
+.mapContainer input:active {
+    outline: 0;
+    border-color: #aaaaaa;
+    background: #ffffff;
+}
 
 /*--------------CONTACT ------------------*/
 .contactContainer{

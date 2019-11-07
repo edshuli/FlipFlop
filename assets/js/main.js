@@ -6,13 +6,14 @@ $(".fa").mouseleave(function() {
   $(this).removeClass("changeColor");
 });
 
-$("h5").mouseenter(function() {
+$(".cardTitle").mouseenter(function() {
   $(this).addClass("highLight");
 });
 
-$("h5").mouseleave(function() {
+$(".cardTitle").mouseleave(function() {
   $(this).removeClass("highLight");
 });
+
 
 //we use http://iamceege.github.io/tooltipster/
 //the tootipster site for this function
@@ -21,10 +22,6 @@ $(document).ready(function() {
 
 });
 
-// Tooltips initMapialization
-//$(function () {
-//$('[data-toggle="tooltip"]').tooltip()
-//})
 
 //Took this from stackoverflow
 var myNav = $(".navbar");
@@ -41,31 +38,23 @@ $(window).on('scroll', function() {
 
 $("button").click(function() {
   $(".navbar-collapse").addClass("scroll");
-})
-
-
-$("input").mouseenter(function() {
-  $(".searchButton").addClass("borderColor");
-});
-$("input").mouseleave(function() {
-  $(".searchButton").removeClass("borderColor");
 });
 
 
 
+
+
+//Start creating Map
 var map;
 var service;
-var  geocoder = new google.maps.Geocoder();
- var infowindow = new google.maps.InfoWindow();
 var currentLoc = null;
-var markerImg = 'https://developers.google.com/maps/documentation/javascript/images/marker_orange';
 
 
 //Create a function for the different types of choice
 function showLocInfo(locType) {
   console.log(locType, currentLoc);
   if (currentLoc != null) {
-    var curr_loc = new google.maps.LatLng(currentLoc.lat, currentLoc.lng)
+    var curr_loc = new google.maps.LatLng(currentLoc.lat, currentLoc.lng);
     map = new google.maps.Map(document.getElementById('map'), {
       center: curr_loc,
       zoom: 14,
@@ -93,27 +82,7 @@ function showLocInfo(locType) {
     service.nearbySearch(request, callback);
   }
 
- // var image = {
-//    url: place.photos,
-//    size: new google.maps.Size(71, 71),
-//    origin: new google.maps.Point(0, 0),
-//    anchor: new google.maps.Point(17, 34),
-//    scaledSize: new google.maps.Size(25, 25)
-//  };
-
-/*var currInfo = `
-    <img style="float:left; width:200px; margin-top:30px" src="img/logo_${category}.png">
-    <div style="margin-left:220px; margin-bottom:20px;">
-      <h2>${name}</h2><p>${description}</p>
-      <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
-      <p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=${apiKey}"></p>
-    </div>
-  `;
- var infowindow = new google.maps.InfoWindow({
-          content: currInfo
-        });
-*/
-
+//Create new markers for the selected  type
   function createMarker(place) {
     var marker = new google.maps.Marker({
       map: map,
